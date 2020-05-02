@@ -1,2 +1,1 @@
-print("aaaaaaaaaaaa
-      ")
+print("aaaaaaaaaaaa")
