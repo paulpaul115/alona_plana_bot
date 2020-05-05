@@ -1,9 +1,11 @@
-client = discord.Client()
+from flask import Flask
+app = Flask(__name__)
 
-@client.event
-async def on_ready():
-    print("ログイン完了")
+@app.route("/")
+def hello():
+  return "Hello World!"
 
+<<<<<<< HEAD
 @client.event
 async def on_message(message):
     if message.author == client.user:
@@ -21,3 +23,7 @@ async def on_message(message):
         await message.channel.send("こんばんは！")
 
 client.run("")
+=======
+if __name__ == "__main__":
+  app.run()
+>>>>>>> 3f58a27 (🙈🍈 Checkpoint)
