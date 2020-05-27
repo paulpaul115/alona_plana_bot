@@ -1,4 +1,5 @@
 import discord
+import os
 
 
 client = discord.Client()
@@ -46,7 +47,9 @@ async def on_message(message):
     if message.content.startswith("$hello"):
         await message.channel.send("Hello!")
 
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 bot.run(os.getenv('TOKEN'))
@@ -56,3 +59,8 @@ client.run(.env('TOKEN'))
 >>>>>>> f75f183 (🐟🚞 Checkpoint)
 =======
 >>>>>>> 43b7f21 (👵🐆 Checkpoint)
+=======
+=======
+client.run(os.getenv('TOKEN'))
+>>>>>>> dad48ff (🐂🏉 Checkpoint)
+>>>>>>> fffadf9 (🐂🏉 Checkpoint)
