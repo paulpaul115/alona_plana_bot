@@ -1,9 +1,9 @@
 import discord
-import os
+
 
 client = discord.Client()
-from discord.ext import commands
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 @client.event
@@ -32,9 +32,16 @@ if __name__ == "__main__":
 bot = commands.Bot(command_prefix='g-')
 bot.remove_command("help")
 @bot.event
+=======
+@client.event
+>>>>>>> f75f183 (🐟🚞 Checkpoint)
 async def on_ready():
-  print("準備完了")
+    print("ログイン完了")
 
 
+<<<<<<< HEAD
 bot.run(os.getenv('TOKEN'))
 >>>>>>> 7333e66 (🚜👨‍❤️‍💋‍👨 Checkpoint)
+=======
+client.run(.env('TOKEN'))
+>>>>>>> f75f183 (🐟🚞 Checkpoint)
