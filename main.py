@@ -38,10 +38,21 @@ bot.remove_command("help")
 async def on_ready():
     print("ログイン完了")
 
+@client.event
+async def on_message(message):
+    if message.author == client.user:
+        return
 
+    if message.content.startswith("$hello"):
+        await message.channel.send("Hello!")
+
+
+<<<<<<< HEAD
 <<<<<<< HEAD
 bot.run(os.getenv('TOKEN'))
 >>>>>>> 7333e66 (🚜👨‍❤️‍💋‍👨 Checkpoint)
 =======
 client.run(.env('TOKEN'))
 >>>>>>> f75f183 (🐟🚞 Checkpoint)
+=======
+>>>>>>> 43b7f21 (👵🐆 Checkpoint)
