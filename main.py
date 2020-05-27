@@ -1,10 +1,10 @@
-from flask import Flask
-app = Flask(__name__)
+import discord
+import os
 
-@app.route("/")
-def hello():
-  return "Hello World!"
+client = discord.Client()
+from discord.ext import commands
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 @client.event
 async def on_message(message):
@@ -27,3 +27,14 @@ client.run("")
 if __name__ == "__main__":
   app.run()
 >>>>>>> 3f58a27 (🙈🍈 Checkpoint)
+=======
+
+bot = commands.Bot(command_prefix='g-')
+bot.remove_command("help")
+@bot.event
+async def on_ready():
+  print("準備完了")
+
+
+bot.run(os.getenv('TOKEN'))
+>>>>>>> 7333e66 (🚜👨‍❤️‍💋‍👨 Checkpoint)
