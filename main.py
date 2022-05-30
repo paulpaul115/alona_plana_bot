@@ -41,11 +41,13 @@ async def on_ready():
 @client.event
 async def on_message(message):
   if message.content.startswith("*allMute"):
+    # message.channel.send(message.author.voice.channel)
     if message.author.guild_permissions.administrator:
-      await message.author.voice.channel.connect()
+      # await message.author.voice.channel.connect()
       await message.channel.send("黙れ!!!!")
-      bot_vc = message.guild.me.voice.channel
+      bot_vc = message.author.voice.channel
       for member in bot_vc.members:
+        await message.channel.send(member)
         await member.edit(mute=True)
 
 <<<<<<< HEAD
