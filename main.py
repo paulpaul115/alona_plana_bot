@@ -40,10 +40,13 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-  if message.author == client.user:
-    return
-  if message.content.startswith("$hello"):
-    await message.channel.send("Hello!!!!")
+  if message.content.startswith("*allMute"):
+    if message.author.guild_permissions.administrator:
+      await message.author.voice.channel.connect()
+      await message.channel.send("黙れ!!!!")
+      bot_vc = message.guild.me.voice.channel
+      for member in bot_vc.members:
+        await member.edit(mute=True)
 
 <<<<<<< HEAD
 
