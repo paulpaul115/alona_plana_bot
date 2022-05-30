@@ -1,7 +1,6 @@
 import discord
 import os
 
-
 client = discord.Client()
 
 <<<<<<< HEAD
@@ -37,15 +36,14 @@ bot.remove_command("help")
 @client.event
 >>>>>>> f75f183 (🐟🚞 Checkpoint)
 async def on_ready():
-    print("ログイン完了")
+  print("ログイン完了")
 
 @client.event
 async def on_message(message):
-    if message.author == client.user:
-        return
-
-    if message.content.startswith("$hello"):
-        await message.channel.send("Hello!")
+  if message.author == client.user:
+    return
+  if message.content.startswith("$hello"):
+    await message.channel.send("Hello!")
 
 <<<<<<< HEAD
 
