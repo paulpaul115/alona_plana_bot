@@ -1,5 +1,6 @@
 import discord
 import os
+import random
 
 client = discord.Client()
 
@@ -40,6 +41,10 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
+  if message.content == "!占い":
+    unsei = ["大吉", "中吉", "吉", "末吉", "小吉", "凶", "大凶"]
+    choice = random.choice(unsei)
+    await message.channel.send(choice)
   if message.content.startswith("*allMute"):
     await message.author.voice.channel.connect()
     # message.channel.send(message.author.voice.channel)
@@ -51,6 +56,7 @@ async def on_message(message):
     #     await message.channel.send(member)
     #     await member.edit(mute=True)
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -67,4 +73,10 @@ client.run(.env('TOKEN'))
 =======
 client.run(os.getenv('TOKEN'))
 >>>>>>> dad48ff (🐂🏉 Checkpoint)
+<<<<<<< HEAD
 >>>>>>> fffadf9 (🐂🏉 Checkpoint)
+=======
+=======
+client.run(os.getenv('TOKEN'))
+>>>>>>> 3cd7792 (⛲️😼 Checkpoint)
+>>>>>>> 3558a36 (⛲️😼 Checkpoint)
