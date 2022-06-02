@@ -41,20 +41,12 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
+  # !などはwake word
+  # 普通の発言などでボットが動かないように記号を頭につけてください。
   if message.content == "!占い":
     unsei = ["大吉", "中吉", "吉", "末吉", "小吉", "凶", "大凶"]
     choice = random.choice(unsei)
     await message.channel.send(choice)
-  if message.content.startswith("*allMute"):
-    await message.author.voice.channel.connect()
-    # message.channel.send(message.author.voice.channel)
-    # if message.author.guild_permissions.administrator:
-    #   # await message.author.voice.channel.connect()
-    #   await message.channel.send("黙れ!!!!")
-    #   bot_vc = message.author.voice.channel
-    #   for member in bot_vc.members:
-    #     await message.channel.send(member)
-    #     await member.edit(mute=True)
 
 <<<<<<< HEAD
 <<<<<<< HEAD
