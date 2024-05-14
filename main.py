@@ -4,8 +4,9 @@ from discord_slash import SlashCommand
 import os
 import random
 
-bot = commands.Bot(command_prefix='/', intents=discord.Intents.default())
+bot = commands.Bot(command_prefix='/', intents=discord.Intents.default(),activity=discord.Game("💎"))
 slash = SlashCommand(bot, sync_commands=True)
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -43,6 +44,8 @@ bot.remove_command("help")
 async def on_ready():
   print("ログイン完了")
 =======
+=======
+>>>>>>> 4a6f67a (🎺🚞 Checkpoint)
 @slash.slash(name="gacha")
 async def _gacha(ctx):
     # Define the weights for the results
