@@ -48,7 +48,7 @@ async def _gacha(ctx):
     # Define the weights for the results
     weights_first_nine = [78.5, 18.5, 3]
     weights_tenth = [97, 3]
-    results = ["🟪", "🟨", "🟦"]
+    results = ["🟦", "🟨", "🟪"]
     
     # Perform draws for the first 9 results
     gacha_results = random.choices(results, weights=weights_first_nine, k=9)
@@ -57,9 +57,30 @@ async def _gacha(ctx):
     gacha_results.append(random.choices(results[1:], weights=weights_tenth, k=1)[0])
     
     # Send the result to the channel
+<<<<<<< HEAD
     await ctx.send(','.join(gacha_results))
 >>>>>>> 7f7088c (🎣😘 Checkpoint)
+=======
+    await ctx.send(' '.join(gacha_results))
+>>>>>>> 13a0f33 (🎬🐩 Checkpoint)
 
+    
+@slash.slash(name="gacha_p")
+async def _gacha_p(ctx):
+    # Define the weights for the results
+    weights_first_nine = [51.5, 18.5, 30]
+    weights_tenth = [70, 30]
+    results = ["🟦", "🟨", "🟪"]
+    
+    # Perform draws for the first 9 results
+    gacha_results = random.choices(results, weights=weights_first_nine, k=9)
+    
+    # Perform draw for the 10th result
+    gacha_results.append(random.choices(results[1:], weights=weights_tenth, k=1)[0])
+    
+    # Send the result to the channel
+    await ctx.send(' '.join(gacha_results))
+    
 
 <<<<<<< HEAD
 <<<<<<< HEAD
