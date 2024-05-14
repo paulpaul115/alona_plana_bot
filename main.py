@@ -1,9 +1,13 @@
 import discord
+from discord.ext import commands
+from discord_slash import SlashCommand
 import os
 import random
 
-client = discord.Client()
+bot = commands.Bot(command_prefix='/', intents=discord.Intents.default())
+slash = SlashCommand(bot, sync_commands=True)
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -38,16 +42,26 @@ bot.remove_command("help")
 >>>>>>> f75f183 (🐟🚞 Checkpoint)
 async def on_ready():
   print("ログイン完了")
+=======
+@slash.slash(name="gacha")
+async def _gacha(ctx):
+    # Define the weights for the results
+    weights_first_nine = [78.5, 18.5, 3]
+    weights_tenth = [97, 3]
+    results = ["🟪", "🟨", "🟦"]
+    
+    # Perform draws for the first 9 results
+    gacha_results = random.choices(results, weights=weights_first_nine, k=9)
+    
+    # Perform draw for the 10th result
+    gacha_results.append(random.choices(results[1:], weights=weights_tenth, k=1)[0])
+    
+    # Send the result to the channel
+    await ctx.send(','.join(gacha_results))
+>>>>>>> 7f7088c (🎣😘 Checkpoint)
 
-@client.event
-async def on_message(message):
-  # !などはwake word
-  # 普通の発言などでボットが動かないように記号を頭につけてください。
-  if message.content == "!占い":
-    unsei = ["大吉", "中吉", "吉", "末吉", "小吉", "凶", "大凶"]
-    choice = random.choice(unsei)
-    await message.channel.send(choice)
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -71,4 +85,10 @@ client.run(os.getenv('TOKEN'))
 =======
 client.run(os.getenv('TOKEN'))
 >>>>>>> 3cd7792 (⛲️😼 Checkpoint)
+<<<<<<< HEAD
 >>>>>>> 3558a36 (⛲️😼 Checkpoint)
+=======
+=======
+bot.run(os.getenv('TOKEN'))
+>>>>>>> ab50f74 (🎣😘 Checkpoint)
+>>>>>>> 7f7088c (🎣😘 Checkpoint)
