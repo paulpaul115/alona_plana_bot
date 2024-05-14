@@ -7,6 +7,7 @@ import random
 bot = commands.Bot(command_prefix='/', intents=discord.Intents.default(),activity=discord.Game("💎"))
 slash = SlashCommand(bot, sync_commands=True)
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -48,6 +49,10 @@ async def on_ready():
 >>>>>>> 4a6f67a (🎺🚞 Checkpoint)
 @slash.slash(name="gacha")
 async def _gacha(ctx):
+=======
+@slash.slash(name="alona")
+async def _alona(ctx):
+>>>>>>> 6fb874b (🍇🐔 Checkpoint)
     # Define the weights for the results
     weights_first_nine = [78.5, 18.5, 3]
     weights_tenth = [97, 3]
@@ -68,8 +73,8 @@ async def _gacha(ctx):
 >>>>>>> 13a0f33 (🎬🐩 Checkpoint)
 
     
-@slash.slash(name="gacha_p")
-async def _gacha_p(ctx):
+@slash.slash(name="plana")
+async def _plana(ctx):
     # Define the weights for the results
     weights_first_nine = [51.5, 18.5, 30]
     weights_tenth = [70, 30]
