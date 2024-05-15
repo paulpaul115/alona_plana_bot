@@ -75,6 +75,7 @@ async def _alona(ctx):
 =======
     embed=discord.Embed(title="アロナ！", color=0x50f6fd)
     embed.add_field(name="結果", value=' '.join(gacha_results), inline=False)
+    embed.add_field(name="-1200💎",value="",inline=False)
     await ctx.send(embed=embed)
 
 >>>>>>> 7d3d6d2 (🕵🏍 Checkpoint)
@@ -95,7 +96,8 @@ async def _plana(ctx):
     
     # Send the result to the channel
     embed=discord.Embed(title="プラナ！", color=0xff6bad)
-    embed.add_field(name="結果", value=' '.join(gacha_results), inline=False)  
+    embed.add_field(name="結果", value=' '.join(gacha_results), inline=False)
+    embed.add_field(name="-1200💎",value="",inline=False)
     await ctx.send(embed=embed)
     
 
