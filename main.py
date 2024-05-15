@@ -66,11 +66,18 @@ async def _alona(ctx):
     
     # Send the result to the channel
 <<<<<<< HEAD
+<<<<<<< HEAD
     await ctx.send(','.join(gacha_results))
 >>>>>>> 7f7088c (🎣😘 Checkpoint)
 =======
     await ctx.send(' '.join(gacha_results))
 >>>>>>> 13a0f33 (🎬🐩 Checkpoint)
+=======
+    embed=discord.Embed(title="アロナ！", color=0x50f6fd)
+    embed.add_field(name="結果", value=' '.join(gacha_results), inline=False)
+    await ctx.send(embed=embed)
+
+>>>>>>> 7d3d6d2 (🕵🏍 Checkpoint)
 
     
 @slash.slash(name="plana")
@@ -87,7 +94,9 @@ async def _plana(ctx):
     gacha_results.append(random.choices(results[1:], weights=weights_tenth, k=1)[0])
     
     # Send the result to the channel
-    await ctx.send(' '.join(gacha_results))
+    embed=discord.Embed(title="プラナ！", color=0xff6bad)
+    embed.add_field(name="結果", value=' '.join(gacha_results), inline=False)  
+    await ctx.send(embed=embed)
     
 
 <<<<<<< HEAD
