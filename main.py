@@ -6,50 +6,7 @@ import random
 
 bot = commands.Bot(command_prefix='/', intents=discord.Intents.default(),activity=discord.Game("💎"))
 slash = SlashCommand(bot, sync_commands=True)
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-@client.event
-async def on_message(message):
-    if message.author == client.user:
-        return
-
-    if message.content.startswith("こんにちは！"):
-        await message.channel.send("こんにちは！")
-    if message.content.startswith("よし"):
-        await message.channel.send("どうでしたか？")
-    if message.content.startswith("ふぅ"):
-        await message.channel.send("おつかれさん")
-    if message.content.startswith("ああ"):
-        await message.channel.send("どうした？")
-    if message.content.startswith("こんばんは！"):
-        await message.channel.send("こんばんは！")
-
-client.run("")
-=======
-if __name__ == "__main__":
-  app.run()
->>>>>>> 3f58a27 (🙈🍈 Checkpoint)
-=======
-
-bot = commands.Bot(command_prefix='g-')
-bot.remove_command("help")
-@bot.event
-=======
-@client.event
->>>>>>> f75f183 (🐟🚞 Checkpoint)
-async def on_ready():
-  print("ログイン完了")
-=======
-=======
->>>>>>> 4a6f67a (🎺🚞 Checkpoint)
-@slash.slash(name="gacha")
-async def _gacha(ctx):
-=======
 @slash.slash(name="alona")
 async def _alona(ctx):
 >>>>>>> 6fb874b (🍇🐔 Checkpoint)
@@ -65,20 +22,10 @@ async def _alona(ctx):
     gacha_results.append(random.choices(results[1:], weights=weights_tenth, k=1)[0])
     
     # Send the result to the channel
-<<<<<<< HEAD
-<<<<<<< HEAD
-    await ctx.send(','.join(gacha_results))
->>>>>>> 7f7088c (🎣😘 Checkpoint)
-=======
-    await ctx.send(' '.join(gacha_results))
->>>>>>> 13a0f33 (🎬🐩 Checkpoint)
-=======
     embed=discord.Embed(title="アロナ！", color=0x50f6fd)
     embed.add_field(name="結果", value=' '.join(gacha_results), inline=False)
     embed.add_field(name="-1200💎",value="",inline=False)
     await ctx.send(embed=embed)
-
->>>>>>> 7d3d6d2 (🕵🏍 Checkpoint)
 
     
 @slash.slash(name="plana")
@@ -100,35 +47,4 @@ async def _plana(ctx):
     embed.add_field(name="-1200💎",value="",inline=False)
     await ctx.send(embed=embed)
     
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 bot.run(os.getenv('TOKEN'))
->>>>>>> 7333e66 (🚜👨‍❤️‍💋‍👨 Checkpoint)
-=======
-client.run(.env('TOKEN'))
->>>>>>> f75f183 (🐟🚞 Checkpoint)
-=======
->>>>>>> 43b7f21 (👵🐆 Checkpoint)
-=======
-=======
-client.run(os.getenv('TOKEN'))
->>>>>>> dad48ff (🐂🏉 Checkpoint)
-<<<<<<< HEAD
->>>>>>> fffadf9 (🐂🏉 Checkpoint)
-=======
-=======
-client.run(os.getenv('TOKEN'))
->>>>>>> 3cd7792 (⛲️😼 Checkpoint)
-<<<<<<< HEAD
->>>>>>> 3558a36 (⛲️😼 Checkpoint)
-=======
-=======
-bot.run(os.getenv('TOKEN'))
->>>>>>> ab50f74 (🎣😘 Checkpoint)
->>>>>>> 7f7088c (🎣😘 Checkpoint)
